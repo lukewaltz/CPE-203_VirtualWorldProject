@@ -1,0 +1,19 @@
+WORLD_EVENT.txt
+
+1. The event will be triggered by a mouse click.
+    NOTE:
+        you can also spawn a house at the location of your mouse by pressing 'h'
+        you can also spawn a dudeFull at the location of your mouse by pressing the SPACE BAR
+        you can also de-spawn any entity at the location of your mouse by pressing 'e'
+
+2. The mouse click will cause a lightning strike and for the Monster to spawn at the location of the click.
+    The lightning strike will last one second.
+    If that cell is already occupied, nothing will happen on click.
+
+3. Any dudes in the area of effect at the time of the click will change their pathing navigate to the nearest Fairy using AStar.
+    Their speed will also double, and they will turn yellow signifying that they are scared. once they make it to the nearest fairy,
+    they will remain there until either they or the monster are killed.
+    If there are no more monsters, the DudeScared will revert to a DudeFull and begin navigating to the nearest House tell his wife what happened.
+
+4. The new entity is Monster, and he will remove any dude entities he comes in contact with. He moves at a slower Speed than dude and Fairy.
+    He will use AStarPathingStrategy to seek out the nearest dude, he will de-spawn if he comes into contact with a fairy.
